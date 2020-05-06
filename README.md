@@ -10,4 +10,20 @@ Predicting the new emerging and quickly expanding industry of sports betting has
 ## Data collection
 The dataset i used for this project with the help of webscaping python library gazpacho and the wounderful stat collection website [Pro-Football-Reference](https://www.pro-football-reference.com/)
 
-I ultimately retrieving data from 2002 to 2019 and ran into a few road blocks along the way. The first issue i ran into was assuming all of the pages from 2002 to current were the same layout and i figure that out really fast when testing a look for 2017-2019. The main issues were coming from the boxscore links and mainly the the advanced Passing Table. The advanced passers table was only available for the most current year so i forewent that table and decided to focus on the 3 other tables (Game Info, Team Stats, and Passing/Rushing/and Receiving) 
+I ultimately retrieving data from 2002 to 2019 and ran into a few road blocks along the way. The first issue i ran into was assuming all of the pages from 2002 to current were the same layout and i figure that out really fast when testing a look for 2017-2019. The main issues were coming from the boxscore links and mainly the the advanced Passing Table. The advanced passers table was only available for the most current year so i forewent that table and decided to focus on the 3 other tables (Game Info, Team Stats, and Passing/Rushing/and Receiving)
+
+
+## Data Cleaning
+
+I ended up collecting every single game played from 2002 to 2019/2020 seasons which means there are duplicate game stats. To remove these duplicate games I decided to drop every away game row. Which a "smaller" dataset and some EDA/Visualization done i mored onto model Selection. And this was the moment i realized i need to do more data engineering if i wanted to be able to predict the outcome **BEFORE** the game started. Everything collected up to this point were post game / in game stats and since i am not Miss Cleo and know these number before the game i had to create a dataset that i could train with data i would know before the game. To fix this issue I had to go back to the source data and create a rolling mean using the first four games of the season.
+
+## Models
+SVM
+Random Forests
+NN
+
+
+## To-Do
+- [ ] Cut down massive number of features
+- [ ] S3 for data storage (boto)
+- [ ] Sage maker to host and deploy trained models
