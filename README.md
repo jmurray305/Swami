@@ -18,8 +18,9 @@ I ultimately retrieving data from 2002 to 2019 and ran into a few road blocks al
 I ended up collecting every single game played from 2002 to 2019/2020 seasons which means there are duplicate game stats. To remove these duplicate games I decided to drop every away game row. Which a "smaller" dataset and some EDA/Visualization done i mored onto model Selection. And this was the moment i realized i need to do more data engineering if i wanted to be able to predict the outcome **BEFORE** the game started. Everything collected up to this point were post game / in game stats and since i am not Miss Cleo and know these number before the game i had to create a dataset that i could train with data i would know before the game. To fix this issue I had to go back to the source data and create a rolling mean using the first four games of the season.
 
 ## Models
-SVM
-Random Forests
+
+SVM <br>
+Random Forests <br>
 NN
 
 
